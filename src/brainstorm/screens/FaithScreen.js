@@ -1,12 +1,6 @@
-import {View, Text, ScrollView, Alert, Button} from 'react-native';
-import React, {useCallback, useState} from 'react';
-import {CihColor} from '../bundles/Constants';
-import LogoHeader from '../components/header/LogoHeader';
-import FaithList from '../pages/FaithList';
-import ShortsList from '../components/contents/ShortsList';
-import Bottom from '../components/bottom/Bottom';
+import {ScrollView} from 'react-native';
+import React from 'react';
 import Screen from '../components/layout/Screen';
-import YoutubePlayer from 'react-native-youtube-iframe';
 import CategoryContent from '../components/contents/CategoryContent';
 import YoutubeNormal from '../components/collection/YoutubeNormal';
 import PannelBack from '../components/contents/PannelBack';

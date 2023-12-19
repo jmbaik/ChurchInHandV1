@@ -8,4 +8,8 @@ export const CihColor = {
   third: '#E3E4D3',
   black: 'black',
   white: 'white',
+  fontColor: '#516547',
+  contentColor: '#DFE7C0',
+  iconColor: '#635E4E',
+  backgroundColor2: '#FEFCF9',
 };

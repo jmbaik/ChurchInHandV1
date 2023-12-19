@@ -21,9 +21,6 @@ export default function YoutubeNormal({vid}) {
       <View
         style={{
           marginHorizontal: 10,
-          marginBottom: 10,
-          borderWidth: 1,
-          borderColor: 'red',
         }}>
         <YoutubePlayer
           height={height}

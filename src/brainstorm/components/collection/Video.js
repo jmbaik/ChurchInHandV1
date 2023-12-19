@@ -2,6 +2,7 @@ import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React, {useCallback} from 'react';
 import {CihColor} from '../../bundles/Constants';
 import {useNavigation} from '@react-navigation/native';
+import FastImage from 'react-native-fast-image';
 
 export default function Video({category, vid, thumbnail, title, statics}) {
   const {navigate} = useNavigation();
@@ -13,7 +14,7 @@ export default function Video({category, vid, thumbnail, title, statics}) {
       <View style={styles.container} key={vid}>
         <View style={styles.photo}>
           {thumbnail && (
-            <Image style={styles.photo} source={{uri: thumbnail}} />
+            <FastImage style={styles.photo} source={{uri: thumbnail}} />
           )}
         </View>
         <View style={styles.bottom}>

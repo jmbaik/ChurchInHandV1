@@ -52,7 +52,7 @@ export const useDeleteYoutubeFaith = () => {
     isLoading: isLoadingDeleteYoutubeFaith,
   } = useMutation({
     mutationFn: async params => {
-      const response = await apiFetch.post('/youtube/faith-delete', params);
+      const response = await apiFetch.post('/app/faith-delete', params);
       return response.data.result;
     },
     onSuccess: () => {
