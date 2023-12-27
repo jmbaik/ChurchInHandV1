@@ -7,7 +7,6 @@ export default function YoutubeNormal({vid}) {
   const height = Math.floor((width * 9) / 16);
   console.log('width', height);
   // 16: 9 사이즈
-  console.log(vid);
   const [playing, setPlaying] = useState(false);
 
   const onStateChange = useCallback(state => {

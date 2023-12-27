@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
-import {CihColor} from '../../bundles/Constants';
+import {CihColor, CihSize} from '../../bundles/Constants';
 import Divider from '../layout/Divider';
 import AntIcons from '../../../components/icons/AntIcons';
 import MaterialIcons from '../../../components/icons/MaterialIcons';
@@ -46,7 +46,11 @@ function ContentButtonArea() {
         justifyContent: 'space-between',
       }}>
       <View style={styles.buttonView}>
-        <MaterialIcons name="list-alt" size={24} color={CihColor.fontColor} />
+        <MaterialIcons
+          name="list-alt"
+          size={CihSize.contentIconSize}
+          color={CihColor.fontColor}
+        />
         <Text style={styles.buttonText}>말씀목록추가</Text>
       </View>
       <View style={styles.buttonView}>
@@ -58,15 +62,23 @@ function ContentButtonArea() {
         <Text style={styles.buttonText}>찜하기</Text>
       </View>
       <View style={styles.buttonView}>
-        <AntIcons name="like2" size={24} color={CihColor.fontColor} />
+        <AntIcons
+          name="like2"
+          size={CihSize.contentIconSize}
+          color={CihColor.fontColor}
+        />
       </View>
       <View style={styles.buttonView}>
-        <AntIcons name="dislike1" size={24} color={CihColor.fontColor} />
+        <AntIcons
+          name="dislike1"
+          size={CihSize.contentIconSize}
+          color={CihColor.fontColor}
+        />
       </View>
       <View style={styles.buttonView}>
         <MaterialCommunityIcons
           name="pencil-plus-outline"
-          size={24}
+          size={CihSize.contentIconSize}
           color={CihColor.fontColor}
         />
         <Text style={styles.buttonText}>댓글</Text>
@@ -119,9 +131,17 @@ function CommentArea() {
               alignItems: 'center',
               gap: 6,
             }}>
-            <AntIcons size={14} name="like2" color={CihColor.third} />
+            <AntIcons
+              size={CihSize.likesIconSize}
+              name="like2"
+              color={CihColor.third}
+            />
             <Text style={{fontSize: 12, color: '#00000050'}}>111</Text>
-            <AntIcons size={14} name="dislike1" color={CihColor.third} />
+            <AntIcons
+              size={CihSize.likesIconSize}
+              name="dislike1"
+              color={CihColor.third}
+            />
             <Text style={{fontSize: 12, color: '#00000050'}}>102</Text>
           </View>
         </View>

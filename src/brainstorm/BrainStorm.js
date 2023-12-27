@@ -3,6 +3,8 @@ import React from 'react';
 import ShortsList from './components/contents/ShortsList';
 import FaithList from './pages/FaithList';
 import Screen from './components/layout/Screen';
+import PastorCategory from './pages/PastorCategory';
+import ContentPastorList from './components/contents/ContentPastorList';
 
 export default function BrainStorm() {
   // const isDarkMode = useColorScheme() === 'dark';
@@ -16,8 +18,9 @@ export default function BrainStorm() {
       >
         <View style={{marginBottom: 100}}>
           {/* <VideoList title={'목사님 영상'} subTitle={'목사님 영상'} /> */}
+          <PastorCategory />
+          <ContentPastorList />
           <FaithList />
-          <ShortsList />
         </View>
       </ScrollView>
     </Screen>

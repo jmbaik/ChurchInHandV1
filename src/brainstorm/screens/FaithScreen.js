@@ -6,7 +6,6 @@ import YoutubeNormal from '../components/collection/YoutubeNormal';
 import PannelBack from '../components/contents/PannelBack';
 
 export default function FaithScreen({route}) {
-  console.log(route.params.vid);
   const vid = route.params.vid;
 
   // const togglePlaying = useCallback(() => {

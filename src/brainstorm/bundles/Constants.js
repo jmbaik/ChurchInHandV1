@@ -13,3 +13,8 @@ export const CihColor = {
   iconColor: '#635E4E',
   backgroundColor2: '#FEFCF9',
 };
+
+export const CihSize = {
+  likesIconSize: 14,
+  contentIconSize: 20,
+};

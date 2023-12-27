@@ -4,8 +4,6 @@ import {CihColor} from '../../bundles/Constants';
 import {useNavigation} from '@react-navigation/native';
 import MaterialIcons from '../../../components/icons/MaterialIcons';
 import AntIcons from '../../../components/icons/AntIcons';
-import FoundationIcons from '../../../components/icons/FoundationIcons';
-import SimpleLineIcons from '../../../components/icons/SimpleLineIcons';
 
 export default function PannelBack() {
   const navigate = useNavigation();

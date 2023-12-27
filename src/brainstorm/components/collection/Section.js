@@ -1,11 +1,49 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import React from 'react';
 import {CihColor} from '../../bundles/Constants';
+import MaterialCommunityIcons from '../../../components/icons/MaterialCommunityIcons';
+import MaterialIcons from '../../../components/icons/MaterialIcons';
 
 export default function Section({title, children}) {
+  const width = Dimensions.get('window').width;
   return (
     <View style={styles.section}>
-      <Text style={styles.sectionTitleText}>{title}</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: width - 20,
+          backgroundColor: CihColor.secondary,
+          marginVertical: 10,
+          // borderWidth: 1,
+          // borderColor: CihColor.iconColor,
+          borderRadius: 5,
+          marginHorizontal: 10,
+          borderWidth: 1,
+          borderColor: '#00000010',
+        }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <MaterialCommunityIcons
+            name="cross"
+            color={CihColor.white}
+            size={20}
+          />
+          <Text style={styles.sectionTitleText}>{title}</Text>
+        </View>
+        <View style={{marginRight: 2}}>
+          <MaterialIcons
+            name="arrow-forward-ios"
+            size={20}
+            color={CihColor.bottomButtonColor}
+          />
+        </View>
+      </View>
       {children}
     </View>
   );

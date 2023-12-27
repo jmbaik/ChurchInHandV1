@@ -2,16 +2,17 @@ import {useMutation, useQuery, useQueryClient} from '@tanstack/react-query';
 import apiFetch from './axios';
 import {CihApiKeys} from './CihApiConstants';
 
-export const useFetchYoutubeFaith = (p, crud = 'r') => {
+export const useFetchYoutubePastor = (p, crud = 'r') => {
   const {isLoading, data, isError, error, refetch} = useQuery({
-    queryKey: [CihApiKeys.apiQueryKey.faith, p, crud],
+    queryKey: [CihApiKeys.apiQueryKey.pastor, p, crud],
     // get방식일 경우 async인자에 params 인자를 넣어면 안된다.
     queryFn: async () => {
-      const response = await apiFetch.get(CihApiKeys.apiFetchUrl.faith, {
+      const response = await apiFetch.get(CihApiKeys.apiFetchUrl.pastor, {
         params: {
           options: p.options,
           keyword: p.keyword,
           shorts: p.shorts,
+          page: p.page,
         },
       });
       return response.data.result;
@@ -22,34 +23,34 @@ export const useFetchYoutubeFaith = (p, crud = 'r') => {
   return {data, isLoading, isError, error, refetch};
 };
 
-export const useSaveYoutubeFaith = () => {
+export const useSaveYoutubePastor = () => {
   const QueryClient = useQueryClient();
-  const {mutate: mutateSaveYoutubeFaith, isLoading: isLoadingYoutubeFaith} =
+  const {mutate: mutateSaveYoutubePastor, isLoading: isLoadingYoutubePastor} =
     useMutation({
       mutationFn: async params => {
         const response = await apiFetch.post(
-          CihApiKeys.apiFetchUrl.faith,
+          CihApiKeys.apiFetchUrl.pastor,
           params,
         );
         return response.data.result;
       },
       onSuccess: () => {
         QueryClient.invalidateQueries({
-          queryKey: [CihApiKeys.apiQueryKey.faith],
+          queryKey: [CihApiKeys.apiQueryKey.pastor],
         });
       },
       onError: err => {
         console.log(err.message);
       },
     });
-  return {mutateSaveYoutubeFaith, isLoadingYoutubeFaith};
+  return {mutateSaveYoutubePastor, isLoadingYoutubePastor};
 };
 
-export const useDeleteYoutubeFaith = () => {
+export const useDeleteYoutubePastor = () => {
   const QueryClient = useQueryClient();
   const {
-    mutate: mutateDeleteYoutubeFaith,
-    isLoading: isLoadingDeleteYoutubeFaith,
+    mutate: mutateDeleteYoutubePastor,
+    isLoading: isLoadingDeleteYoutubePastor,
   } = useMutation({
     mutationFn: async params => {
       const response = await apiFetch.post('/app/faith-delete', params);
@@ -57,12 +58,12 @@ export const useDeleteYoutubeFaith = () => {
     },
     onSuccess: () => {
       QueryClient.invalidateQueries({
-        queryKey: [CihApiKeys.apiQueryKey.faith],
+        queryKey: [CihApiKeys.apiQueryKey.pastor],
       });
     },
     onError: err => {
       console.log(err);
     },
   });
-  return {mutateDeleteYoutubeFaith, isLoadingDeleteYoutubeFaith};
+  return {mutateDeleteYoutubePastor, isLoadingDeleteYoutubePastor};
 };
