@@ -21,7 +21,7 @@ export default function CategoryContent() {
         }}>
         <Text
           style={{
-            // color: CihColor.fontColor,
+            color: CihColor.black,
             fontWeight: 'bold',
             marginBottom: 4,
             fontSize: 18,

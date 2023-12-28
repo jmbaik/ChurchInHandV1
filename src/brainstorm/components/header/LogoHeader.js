@@ -1,13 +1,7 @@
-import {
-  View,
-  SafeAreaView,
-  TouchableOpacity,
-  Platform,
-  Image,
-} from 'react-native';
+import {View, SafeAreaView, TouchableOpacity, Platform} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Logo from '../../../assets/Cih-logo-02.svg';
+import Logo from '../../../assets/cih-logo-05.svg';
 
 export default function LogoHeader() {
   return (
@@ -21,7 +15,7 @@ export default function LogoHeader() {
           alignItems: 'center',
           ...(Platform.OS === 'android' ? {marginTop: 10} : {}),
         }}>
-        <Logo width={130} height={35} />
+        <Logo width={135} height={34} />
         {/* <CihLogo /> */}
         {/* <Image
           source={require('../../../assets/cih-logo.png')}
