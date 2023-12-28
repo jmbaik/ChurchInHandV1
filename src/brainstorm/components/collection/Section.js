@@ -14,6 +14,7 @@ export default function Section({title, children}) {
           justifyContent: 'space-between',
           alignItems: 'center',
           width: width - 20,
+          height: 30,
           backgroundColor: CihColor.secondary,
           marginVertical: 10,
           // borderWidth: 1,
@@ -54,11 +55,9 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   sectionTitleText: {
-    fontSize: 16,
+    fontSize: 14,
     color: CihColor.black,
     fontWeight: 'bold',
-    marginTop: 10,
-    marginBottom: 8,
     marginLeft: 10,
   },
 });
