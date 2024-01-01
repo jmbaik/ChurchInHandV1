@@ -1,20 +1,24 @@
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React, {useCallback} from 'react';
 import {CihColor} from '../../bundles/Constants';
 import {useNavigation} from '@react-navigation/native';
 import FastImage from 'react-native-fast-image';
 
-export default function Video({category, vid, thumbnail, title, statics}) {
+export default function Video({category, item, statics}) {
+  const {vid, title} = item;
   const {navigate} = useNavigation();
   const onPress = useCallback(() => {
-    navigate(category, {vid});
-  }, [navigate, category, vid]);
+    navigate(category, {item});
+  }, [navigate, category, item]);
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.container} key={vid}>
         <View style={styles.photo}>
-          {thumbnail && (
-            <FastImage style={styles.photo} source={{uri: thumbnail}} />
+          {item.thumbnailMedium && (
+            <FastImage
+              style={styles.photo}
+              source={{uri: item.thumbnailMedium}}
+            />
           )}
         </View>
         <View style={styles.bottom}>

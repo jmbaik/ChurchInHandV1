@@ -3,12 +3,10 @@ import React from 'react';
 import FastImage from 'react-native-fast-image';
 import {useFetchPastor} from '../../api/commonCodeApi';
 import Section from '../components/collection/Section';
-import PastorList from './PastorList';
-import ContentPastorList from '../components/contents/ContentPastorList';
 
 export default function PastorCategory() {
-  const {data, isLoading} = useFetchPastor();
-  const pastorData = data?.filter(v => v.pic.length > 0);
+  const {data} = useFetchPastor();
+  const pastorData = data?.filter(v => v.pic?.length > 0);
   return (
     <Section title="말씀">
       <ScrollView

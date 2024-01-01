@@ -1,7 +1,7 @@
 import {View, SafeAreaView, TouchableOpacity, Platform} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Logo from '../../../assets/cih-logo-05.svg';
+import Logo from '../../../assets/cih-logo-v2.svg';
 
 export default function LogoHeader() {
   return (

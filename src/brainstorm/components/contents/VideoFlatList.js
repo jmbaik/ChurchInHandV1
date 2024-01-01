@@ -1,5 +1,5 @@
-import {View, Text, FlatList, StyleSheet} from 'react-native';
-import React, {useCallback} from 'react';
+import {View, FlatList} from 'react-native';
+import React from 'react';
 import Section from '../collection/Section';
 import Video from '../collection/Video';
 import Shorts from '../collection/Shorts';
@@ -12,18 +12,10 @@ export default function VideoFlatList({title, category, data}) {
       <FlatList
         horizontal
         data={vData}
-        renderItem={({item}) => {
-          return (
-            <Video
-              category={category}
-              vid={item.vid}
-              thumbnail={item.thumbnailMedium}
-              title={item.title}
-              statics={'좋아요: 86 평점 : 88'}
-            />
-          );
+        renderItem={({item, statics = '좋아요: 86 평점 : 88'}) => {
+          return <Video item={item} category={category} statics={statics} />;
         }}
-        contentContainerStyle={{marginLeft: 8}}
+        contentContainerStyle={{marginLeft: 8, marginTop: 6}}
         ItemSeparatorComponent={<View style={{width: 16}} />}
         showsHorizontalScrollIndicator={false}
       />
@@ -34,15 +26,13 @@ export default function VideoFlatList({title, category, data}) {
         renderItem={({item}) => {
           return (
             <Shorts
+              item={item}
               category={category}
-              vid={item.vid}
-              thumbnail={item.thumbnailHigh}
-              title={item.title}
               statics={'좋아요: 86 평점 : 88'}
             />
           );
         }}
-        contentContainerStyle={{marginLeft: 8}}
+        contentContainerStyle={{marginLeft: 8, marginBottom: 10}}
         ItemSeparatorComponent={<View style={{width: 16}} />}
         showsHorizontalScrollIndicator={false}
       />

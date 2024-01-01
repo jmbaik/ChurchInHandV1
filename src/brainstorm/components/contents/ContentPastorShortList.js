@@ -3,14 +3,17 @@ import React from 'react';
 import FastImage from 'react-native-fast-image';
 import {useFetchYoutubePastor} from '../../../api/youtubePastorApi';
 
-const screenWidth = Math.floor((Dimensions.get('window').width - 10 - 16) / 2);
-const screenHeight = Math.floor(screenWidth * (190 / 320));
+/*
+short item size : 9: 16
+*/
+const screenWidth = Math.floor((Dimensions.get('window').width - 10 - 16) / 3);
+const screenHeight = Math.floor(screenWidth * (16 / 9));
 
-export default function ContentPastorList() {
+export default function ContentPastorShortList() {
   const {data, isLoading} = useFetchYoutubePastor({
     options: '',
     keyword: '',
-    shorts: 'N',
+    shorts: 'Y',
     page: 1,
   });
   if (isLoading) {
@@ -25,23 +28,24 @@ export default function ContentPastorList() {
         horizontal
         data={data}
         renderItem={({item}) => {
-          return <PastorLargeItem item={item} />;
+          return <PastorShortItem item={item} />;
         }}
         contentContainerStyle={{marginLeft: 8, marginTop: 10}}
-        ItemSeparatorComponent={<View style={{width: 16}} />}
+        ItemSeparatorComponent={<View style={{width: 8}} />}
         showsHorizontalScrollIndicator={false}
       />
     );
   }
 }
 
-function PastorLargeItem({item}) {
+function PastorShortItem({item}) {
   return (
     <View>
       <FastImage
         source={{
           uri: item.thumbnailHigh,
         }}
+        resizeMode="cover"
         // style={{width: 320, height: 180, borderRadius: 4}}
         style={{width: screenWidth, height: screenHeight, borderRadius: 6}}
       />

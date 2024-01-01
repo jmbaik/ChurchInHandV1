@@ -4,17 +4,18 @@ import {CihColor} from '../../bundles/Constants';
 import {useNavigation} from '@react-navigation/native';
 import FastImage from 'react-native-fast-image';
 
-export default function Shorts({category, vid, thumbnail, title, statics}) {
+export default function Shorts({category, item, statics}) {
+  const {vid, thumbnailHigh} = item;
   const {navigate} = useNavigation();
   const onPress = useCallback(() => {
-    navigate(category, {vid});
-  }, [navigate, category, vid]);
+    navigate(category, {item});
+  }, [navigate, category, item]);
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.container} key={vid}>
         <View style={styles.photo}>
-          {thumbnail && (
-            <FastImage style={styles.photo} source={{uri: thumbnail}} />
+          {thumbnailHigh && (
+            <FastImage style={styles.photo} source={{uri: thumbnailHigh}} />
           )}
         </View>
       </View>

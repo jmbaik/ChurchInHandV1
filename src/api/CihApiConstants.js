@@ -20,6 +20,8 @@ export const CihApiKeys = {
     saveFetchVideosByPlaylistId: '/youtube-data/save-videos-by-playlist',
     saveFetchAllVideosByPlaylistId: '/youtube-data/save-all-videos-by-playlist',
     updateShortsByPlaylistId: '/youtube-data/update-shorts-by-playlist',
+    mainPastor: '/app/main-pastor',
+    mainCeleb: '/app/main-celeb',
     pastor: '/app/pastor',
     celeb: '/app/celeb',
     sermon: '/app/sermon',
@@ -28,6 +30,8 @@ export const CihApiKeys = {
     faith: '/app/faith',
   },
   apiFetchUrl: {
+    mainPastor: '/app/main-pastor',
+    mainCeleb: '/app/main-celeb',
     pastor: '/app/pastor',
     celeb: '/app/celeb',
     sermon: '/app/sermon',
