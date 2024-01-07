@@ -4,8 +4,9 @@ import Screen from '../components/layout/Screen';
 import PannelBack from '../components/contents/PannelBack';
 import YoutubeNormal from '../components/collection/YoutubeNormal';
 import CategoryContent from '../components/contents/CategoryContent';
+import YoutubeShorts from '../components/collection/YoutubeShorts';
 
-export default function CelebScreen({route}) {
+export default function CcmScreen({route}) {
   const item = route.params.item;
 
   // const togglePlaying = useCallback(() => {

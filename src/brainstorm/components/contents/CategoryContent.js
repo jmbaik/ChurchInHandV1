@@ -7,7 +7,7 @@ import MaterialIcons from '../../../components/icons/MaterialIcons';
 import FontAwesomeIcons from '../../../components/icons/FontAwesomeIcons';
 import MaterialCommunityIcons from '../../../components/icons/MaterialCommunityIcons';
 
-export default function CategoryContent() {
+export default function CategoryContent({item}) {
   return (
     <View
       style={{
@@ -28,7 +28,7 @@ export default function CategoryContent() {
             // borderWidth: 1,
             // borderColor: 'red',
           }}>
-          혼나러 왔다가 감동받고 갑니다.{' '}
+          {item?.title}
         </Text>
       </View>
       <ContentButtonArea />

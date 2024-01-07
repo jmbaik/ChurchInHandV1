@@ -12,6 +12,7 @@ export const CihColor = {
   contentColor: '#DFE7C0',
   iconColor: '#635E4E',
   backgroundColor2: '#FEFCF9',
+  bg3: '#dfe7c0',
 };
 
 export const CihSize = {

@@ -22,6 +22,8 @@ export const CihApiKeys = {
     updateShortsByPlaylistId: '/youtube-data/update-shorts-by-playlist',
     mainPastor: '/app/main-pastor',
     mainCeleb: '/app/main-celeb',
+    mainSermon: '/app/main-sermon',
+    mainCcm: '/app/main-ccm',
     pastor: '/app/pastor',
     celeb: '/app/celeb',
     sermon: '/app/sermon',
@@ -32,6 +34,8 @@ export const CihApiKeys = {
   apiFetchUrl: {
     mainPastor: '/app/main-pastor',
     mainCeleb: '/app/main-celeb',
+    mainSermon: '/app/main-sermon',
+    mainCcm: '/app/main-ccm',
     pastor: '/app/pastor',
     celeb: '/app/celeb',
     sermon: '/app/sermon',

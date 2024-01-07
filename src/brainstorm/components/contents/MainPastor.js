@@ -19,13 +19,13 @@ export default function MainPastor() {
     return (
       <View style={{marginTop: 8, marginBottom: 12, marginHorizontal: 10}}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <MainPastorItem item={data[0]} />
-          <MainPastorItem item={data[1]} />
+          <MainPastorItem item={data && data[0]} />
+          <MainPastorItem item={data && data[1]} />
         </View>
         <View style={{height: 10}} />
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <MainPastorItem item={data[2]} />
-          <MainPastorItem item={data[3]} />
+          <MainPastorItem item={data && data[2]} />
+          <MainPastorItem item={data && data[3]} />
         </View>
       </View>
     );

@@ -5,7 +5,7 @@ import PannelBack from '../components/contents/PannelBack';
 import YoutubeNormal from '../components/collection/YoutubeNormal';
 import CategoryContent from '../components/contents/CategoryContent';
 
-export default function CelebScreen({route}) {
+export default function SermonScreen({route}) {
   const item = route.params.item;
 
   // const togglePlaying = useCallback(() => {

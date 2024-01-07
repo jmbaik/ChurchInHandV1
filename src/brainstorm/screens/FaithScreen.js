@@ -16,7 +16,7 @@ export default function FaithScreen({route}) {
       <ScrollView>
         <PannelBack />
         <YoutubeNormal vid={item.vid} />
-        <CategoryContent />
+        <CategoryContent item={item} />
       </ScrollView>
     </Screen>
   );

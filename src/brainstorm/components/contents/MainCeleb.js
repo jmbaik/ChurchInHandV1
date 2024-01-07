@@ -1,8 +1,8 @@
 import {View, ActivityIndicator, Dimensions, FlatList} from 'react-native';
 import React from 'react';
 import {useFetchMainCeleb} from '../../../api/mainContentApi';
-import FastImage from 'react-native-fast-image';
 import Section from '../collection/Section';
+import Video2 from '../collection/Video2';
 import Video from '../collection/Video';
 
 const screenWidth = Math.floor((Dimensions.get('window').width - 16 - 16) / 2);
@@ -19,16 +19,20 @@ export default function MainCeleb() {
   } else {
     return (
       <Section title="간증">
-        <FlatList
-          horizontal
-          data={data}
-          renderItem={({item, statics = '좋아요: 86 평점 : 88'}) => {
-            return <Video item={item} category="Celeb" statics={statics} />;
-          }}
-          contentContainerStyle={{marginLeft: 8, marginTop: 6}}
-          ItemSeparatorComponent={<View style={{width: 16}} />}
-          showsHorizontalScrollIndicator={false}
-        />
+        <View style={{height: screenHeight + 80, marginLeft: 10}}>
+          <FlatList
+            horizontal
+            data={data}
+            renderItem={({item, statics = '좋아요: 86 평점 : 88'}) => {
+              return <Video item={item} category="Celeb" statics={statics} />;
+            }}
+            contentContainerStyle={{
+              marginTop: 6,
+            }}
+            ItemSeparatorComponent={<View style={{width: 12}} />}
+            showsHorizontalScrollIndicator={false}
+          />
+        </View>
       </Section>
     );
   }
