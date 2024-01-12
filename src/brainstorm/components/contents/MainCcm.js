@@ -15,7 +15,7 @@ export default function MainCcm() {
         data={sData}
         renderItem={({item}) => {
           return (
-            <Shorts2
+            <Shorts
               item={item}
               category={category}
               statics={'좋아요: 86 평점 : 88'}

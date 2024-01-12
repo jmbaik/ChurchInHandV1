@@ -1,10 +1,8 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import {CihColor, CihSize} from '../../bundles/Constants';
-import Divider from '../layout/Divider';
 import AntIcons from '../../../components/icons/AntIcons';
 import MaterialIcons from '../../../components/icons/MaterialIcons';
-import FontAwesomeIcons from '../../../components/icons/FontAwesomeIcons';
 import MaterialCommunityIcons from '../../../components/icons/MaterialCommunityIcons';
 
 export default function CategoryContent({item}) {
@@ -82,6 +80,14 @@ function ContentButtonArea() {
           color={CihColor.fontColor}
         />
         <Text style={styles.buttonText}>댓글</Text>
+      </View>
+      <View style={styles.buttonView}>
+        <MaterialIcons
+          name="upload"
+          size={CihSize.contentIconSize}
+          color={CihColor.fontColor}
+        />
+        <Text style={styles.buttonText}>추천</Text>
       </View>
     </View>
   );
@@ -165,5 +171,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: CihColor.fontColor,
     fontSize: 10,
+    fontWeight: 'bold',
   },
 });

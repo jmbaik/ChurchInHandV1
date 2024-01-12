@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
   },
   bottom: {
     padding: 12,
+    height: 80,
   },
   nameText: {
     color: CihColor.black,

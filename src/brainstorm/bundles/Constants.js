@@ -17,5 +17,5 @@ export const CihColor = {
 
 export const CihSize = {
   likesIconSize: 14,
-  contentIconSize: 20,
+  contentIconSize: 16,
 };
