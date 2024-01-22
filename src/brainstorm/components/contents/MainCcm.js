@@ -9,7 +9,7 @@ export default function MainCcm() {
   const category = 'Ccm';
   const {data: sData} = useFetchMainCcm();
   return (
-    <Section title="나의 성장">
+    <Section title="찬양">
       <FlatList
         horizontal
         data={sData}
