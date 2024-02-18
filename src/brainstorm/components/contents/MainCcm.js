@@ -1,9 +1,8 @@
-import {View, Text, FlatList} from 'react-native';
+import {View, FlatList} from 'react-native';
 import React from 'react';
 import Section from '../collection/Section';
 import Shorts from '../collection/Shorts';
 import {useFetchMainCcm} from '../../../api/mainContentApi';
-import Shorts2 from '../collection/Shorts2';
 
 export default function MainCcm() {
   const category = 'Ccm';

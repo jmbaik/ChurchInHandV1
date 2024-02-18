@@ -30,10 +30,10 @@ export default function MainSermon() {
       <Section title="강해 설교">
         <View
           style={{
-            marginTop: 8,
+            marginTop: 2,
             marginBottom: 12,
             marginHorizontal: 18,
-            width: screenWidth * 2,
+            width: screenWidth * 2 - 20,
           }}>
           {/* <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <MainSermonItem item={data[0]} />
@@ -61,9 +61,10 @@ function MainPlainText({item}) {
         style={{
           height: 30,
         }}>
-        <Text style={{fontSize: 16}}>{item.tag}</Text>
+        <Text style={{fontSize: 14, color: CihColor.black}}>{item.tag}</Text>
       </View>
-      <Divider />
+      <View style={{height: 1, backgroundColor: CihColor.bottomButtonColor}} />
+      <View style={{height: 8}} />
     </TouchableOpacity>
   );
 }

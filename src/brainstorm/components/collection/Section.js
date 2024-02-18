@@ -1,4 +1,10 @@
-import {View, Text, StyleSheet, Dimensions} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Dimensions,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {CihColor} from '../../bundles/Constants';
 import MaterialCommunityIcons from '../../../components/icons/MaterialCommunityIcons';
@@ -37,13 +43,15 @@ export default function Section({title, children}) {
           />
           <Text style={styles.sectionTitleText}>{title}</Text>
         </View>
-        <View style={{marginRight: 2}}>
-          <MaterialIcons
-            name="arrow-forward-ios"
-            size={20}
-            color={CihColor.bottomButtonColor}
-          />
-        </View>
+        <TouchableOpacity>
+          <View style={{marginRight: 2}}>
+            <MaterialIcons
+              name="arrow-forward-ios"
+              size={20}
+              color={CihColor.bottomButtonColor}
+            />
+          </View>
+        </TouchableOpacity>
       </View>
       {children}
     </View>
