@@ -12,7 +12,6 @@ import {useFetchMainSermon} from '../../../api/mainContentApi';
 import Section from '../collection/Section';
 import {useNavigation} from '@react-navigation/native';
 import {CihColor} from '../../bundles/Constants';
-import Divider from '../layout/Divider';
 
 const screenWidth = Math.floor((Dimensions.get('window').width - 16 - 16) / 2);
 const screenHeight = Math.floor(screenWidth * (190 / 320) - 6);
